@@ -29,9 +29,9 @@ def udp_proxy(listen_ip, listen_port, target_ip, target_port):
             except OSError as e:
                 print(f"❌ Ошибка при отправке данных: {e}")
                 # For macOS и Linux
-                if e.errno == 10051:
+                #if e.errno == 10051:
                 # For Windows
-                #if e.winerror == 10051:
+                if e.winerror == 10051:
                     print("🚨 Проверь подключение к сети, маршруты и настройки файрвола!")
                 continue
 
